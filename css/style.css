@@ -1,0 +1,71 @@
+:root {
+    --primary-coffee: #472f8a;
+    --secondary-coffee: #0340c2;
+    --accent-coffee: #d7ccc8;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ebeaea;
+}
+
+/* Colores personalizados para componentes Bootstrap */
+.bg-coffee {
+    background-color: var(--primary-coffee) !important;
+}
+
+.btn-coffee {
+    background-color: var(--secondary-coffee);
+    color: rgb(0, 0, 0);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* =========================================
+   AJUSTES PARA MODO OSCURO
+   ========================================= */
+
+/* Cuando el HTML tiene el modo oscuro activado, cambiamos el fondo general */
+[data-bs-theme="dark"] body {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+/* Ajustamos el color de las tarjetas en modo oscuro para que no se pierdan */
+[data-bs-theme="dark"] .card {
+    background-color: #343a40;
+    border-color: #4e5d6c;
+}
+
+/* Navbar purple (applied to .navbar-blue and .bg-blue) */
+.navbar-blue,
+.bg-blue {
+    background-color: var(--primary-coffee) !important;
+}
+.navbar-blue .navbar-brand,
+.navbar-blue .nav-link,
+.navbar-blue .btn,
+.navbar-blue .navbar-text {
+    color: #ffffff !important;
+}
+.navbar-blue .nav-link:hover,
+.navbar-blue .nav-link:focus,
+.navbar-blue .nav-link.active {
+    color: var(--accent-coffee) !important;
+}
+.navbar-blue .navbar-toggler {
+    border-color: rgba(255,255,255,0.2);
+}
+.navbar-blue .navbar-toggler-icon {
+    filter: invert(1) brightness(2);
+}
