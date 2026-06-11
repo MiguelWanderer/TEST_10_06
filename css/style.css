@@ -1,6 +1,6 @@
 :root {
     --primary-coffee: #472f8a;
-    --secondary-coffee: #0340c2;
+    --secondary-coffee: #8770c9;
     --accent-coffee: #d7ccc8;
 }
 
@@ -11,7 +11,7 @@ body {
 
 /* Colores personalizados para componentes Bootstrap */
 .bg-coffee {
-    background-color: var(--primary-coffee) !important;
+    color: #212529;
 }
 
 .btn-coffee {
@@ -47,7 +47,7 @@ body {
     border-color: #4e5d6c;
 }
 
-/* Navbar purple (applied to .navbar-blue and .bg-blue) */
+/* Navbar purple (applied to .navbar-blue and .bg-blue) Codigo sugerio por Ia. */
 .navbar-blue,
 .bg-blue {
     background-color: var(--primary-coffee) !important;
