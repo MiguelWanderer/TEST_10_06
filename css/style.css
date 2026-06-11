@@ -9,6 +9,11 @@ body {
     background-color: #ebeaea;
 }
 
+h2 {
+    color: var(--primary-coffee);
+    margin-bottom: 20px;
+    scale: 120%;
+}
 /* Colores personalizados para componentes Bootstrap */
 .bg-coffee {
     color: #0073e6;
@@ -68,4 +73,45 @@ body {
 }
 .navbar-blue .navbar-toggler-icon {
     filter: invert(1) brightness(2);
+}
+
+/* Fondo pizarra desvanecida
+   - Coloca el archivo `pizarra.jpg` dentro de la carpeta `css/`.
+   - Se usa un pseudo-elemento fijo para que la pizarra quede detrás de todo el contenido y con baja opacidad. */
+body {
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('css/pizarra.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+    filter: grayscale(80%) contrast(0.9) brightness(0.9);
+}
+
+/* Refuerzo sutil para la sección 'hero' si quieres que la pizarra se note un poco más ahí */
+.hero-section {
+    position: relative;
+    z-index: 0;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('pizarra.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.12;
+    z-index: -1;
+    pointer-events: none;
+    filter: grayscale(100%) contrast(0.9) brightness(0.95);
 }
